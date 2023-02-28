@@ -21,10 +21,10 @@ def calculate_total_price(order):
 
 #Delivery
 def simulate_delivery():
-  print("Your order is being prepared...")
-  time.sleep(3)
-  print("Your order is on the way!")
-  time.sleep(5)
+    print("Your order is being prepared...")
+    time.sleep(3)
+    print("Your order is on the way!")
+    time.sleep(5)
     print("Your order has been delivered. Enjoy your meal!")
 
 
@@ -36,7 +36,6 @@ def process_input(user_input):
     elif "order" in user_input:
         order = []
         while True:
-            print(menu)
             item = input("What would you like to order? ")
             if item in menu:
                 order.append(item)
