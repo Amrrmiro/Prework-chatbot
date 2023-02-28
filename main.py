@@ -2,30 +2,29 @@ import time
 
 # Menu & prices
 menu = {
-    "Big Mac": 3.99,
-    "Quarter Pounder": 4.99,
-    "McChicken": 3.49,
+    "Amr's Burger": 3.99,
+    "Big Boss": 4.99,
+    "Chicken Sandwich": 3.49,
     "French Fries": 1.49,
-    "McFlurry": 2.49,
     "Coca Cola": 1.00,
     "Sprite": 1.00,
     "Fanta": 1.00,
     "Water": 0.99
 }
 
-# Order calculator
+#calculator
 def calculate_total_price(order):
     total_price = 0
     for item in order:
         total_price += menu[item]
     return total_price
 
-# Delivery
+#Delivery
 def simulate_delivery():
-    print("Your order is being prepared...")
-    time.sleep(3)
-    print("Your order is on the way!")
-    time.sleep(5)
+  print("Your order is being prepared...")
+  time.sleep(3)
+  print("Your order is on the way!")
+  time.sleep(5)
     print("Your order has been delivered. Enjoy your meal!")
 
 
@@ -37,6 +36,7 @@ def process_input(user_input):
     elif "order" in user_input:
         order = []
         while True:
+            print(menu)
             item = input("What would you like to order? ")
             if item in menu:
                 order.append(item)
@@ -59,8 +59,7 @@ def process_input(user_input):
     else:
         print("Sorry, I didn't understand that.")
 
-# Start of the program
-print("Welcome to McDonald's! For menu type 'menu', To order type 'order'.")
+print("Welcome to Amr's! For menu type 'menu', To order type 'order'.")
 while True:
     user_input = input("> ").lower()
     if user_input == "exit":
